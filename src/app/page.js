@@ -1,7 +1,11 @@
+import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
+import Header from "./components/Header/Header";
+
 export default function Home() {
   return (
-    <div className="header">
-      <img src="" alt="imagem logo"></img>
+    <div className="header bg-sky-600">
+      <Header />
+      <HomeCarousel />
     </div>
   )
 }
