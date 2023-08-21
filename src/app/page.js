@@ -5,14 +5,16 @@ import Header from "./components/Header/Header";
 export default function Home() {
   return (
     <div className="header bg-sky-600 h-screen">
-      <Header />
+      <Header login={false}/>
       <div className="flex justify-evenly items-center ">
         <h1 className="font-bold text-2xl w-1/2">O que nosso autoSeguro cobre:</h1>
       </div>
       <HomeCarousel />
-      <Link href='/cotacao' className='mx-auto my-11'>
-        Faça sua cotação
-      </Link>
+      <div className='flex justify-center'>
+        <Link href='/cotacao' className='bg-yellow-400 text-2xl font-bold my-11 py-7 px-24 rounded-xl'>
+          Faça sua cotação
+        </Link>
+      </div>
     </div>
   )
 }

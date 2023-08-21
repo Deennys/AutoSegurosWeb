@@ -59,7 +59,6 @@ const HomeCarousel = () => {
                             }} className={`${index === currentIndex ? 'bg-purple-700' : 'bg-gray-600'} w-6 h-6 mx-2 rounded-full`} />
                         ))}
                     </div>
-                    <button>Faça sua cotação</button>
                 </div>
             </div>
         </div>
