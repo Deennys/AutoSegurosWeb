@@ -34,7 +34,7 @@ const HomeCarousel = () => {
     }, [])
 
     return (
-        <div className="relative flex justify-center items-center h-screen">
+        <div className="relative flex justify-center items-center h-auto">
             <div className="relative p-8 rounded-xl shadow-lg w-1/2 bg-white border-4 border-black">
                 <div className="text-center">
                     <Image src={imgs[currentIndex]} alt="Image" className='mx-auto h-64' width={300}/>
@@ -59,6 +59,7 @@ const HomeCarousel = () => {
                             }} className={`${index === currentIndex ? 'bg-purple-700' : 'bg-gray-600'} w-6 h-6 mx-2 rounded-full`} />
                         ))}
                     </div>
+                    <button>Faça sua cotação</button>
                 </div>
             </div>
         </div>
