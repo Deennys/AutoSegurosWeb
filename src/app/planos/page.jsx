@@ -10,22 +10,32 @@ async function getPlanos() {
 export default async function page() {
   const data = await getPlanos();
   return (
-    <div>
+    <div div className="bg-sky-600 h-screen">
       <Header login={true} />
-      <div>
-        <h3>Selecione o que seu plano irá cobrir</h3>
-      </div>
-      <div>
+      <div className="flex flex-col justify-center items-center bg-neutral-100 w-3/5 m-auto rounded-2xl">
         <div>
-          <div></div>
-          <div>
-            <button>Ver Plano</button>
-          </div>
+          <h3 className="font-extrabold text-2xl">
+            Selecione o que seu plano irá cobrir:
+          </h3>
         </div>
-        <div>
-        {data.map((data) => (
-           <p key={data.id}>data.nome</p>      
-        ))}
+        <div className="w-full mt-2">
+          <div className="flex justify-center">
+            <h3>R$5.000,00</h3>
+          </div>
+          <div className="flex justify-center">
+            <button className="w-4/5 bg-blue-400 mx-auto my-7 px-20 h-20 py-7 text-xl font-extrabold rounded-2xl">
+              Ver Plano
+            </button>
+          </div>
+          <div className="flex flex-col items-center">
+            {data.map((data) => (
+              <div className="flex">
+                <button className="text-2xl" key={data.id}>
+                </button>
+                <span></span>data.nome
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
