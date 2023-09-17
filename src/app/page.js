@@ -11,7 +11,7 @@ export default function Home() {
       </div>
       <HomeCarousel />
       <div className='flex justify-center'>
-        <Link href='/cotacao' className='bg-yellow-400 text-2xl font-bold my-11 py-7 px-24 rounded-xl'>
+        <Link href='/planos' className='bg-yellow-400 text-2xl font-bold my-11 py-7 px-24 rounded-xl'>
           Faça sua cotação
         </Link>
       </div>
