@@ -10,7 +10,7 @@ async function getPlanos() {
 export default async function page() {
   const data = await getPlanos();
   return (
-    <div div className="bg-sky-600 h-screen">
+    <div div className="bg-sky-600 min-h-full">
       <Header login={true} />
       <div className="flex flex-col justify-center items-center bg-neutral-100 w-3/5 m-auto rounded-2xl">
         <div>

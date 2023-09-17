@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header/Header';
 import { logar } from "@/actions/cadastrar";
@@ -18,7 +19,7 @@ export default function page() {
     }
 
   return (
-    <div div className="bg-sky-600 h-screen">
+    <div div className="bg-sky-600 min-h-[100vh]">
         <Header login={true} />
         <div className='bg-white rounded-2xl w-6/12 mx-auto'>
             <form action={handleSubmit} className='flex flex-col'>
