@@ -2,9 +2,9 @@ import React from "react";
 import Header from "../components/Header/Header";
 
 async function getPlanos() {
-  const url = "http://localhost:8080/api/Servico";
-  const response = await fetch(url, { next: { revalidate: 0 } });
-  return response.json();
+  // const url = "http://localhost:8080/api/Servico";
+  // const response = await fetch(url, { next: { revalidate: 0 } });
+  // return response.json();
 }
 
 export default async function page() {
@@ -28,7 +28,7 @@ export default async function page() {
             </button>
           </div>
           <div className="flex flex-col items-center">
-            {data.map((data) => (
+            {data?.map((data) => (
               <div className="flex">
                 <button className="text-2xl" key={data.id}>
                 </button>
