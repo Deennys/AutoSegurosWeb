@@ -14,6 +14,8 @@ pnpm dev
 
 ## Link api deployada: 
 
-- (https://api-autoseguros-production.up.railway.app)[https://api-autoseguros-production.up.railway.app/]
+- [https://api-autoseguros-production.up.railway.app](https://api-autoseguros-production.up.railway.app)
 
 ## Link frontend deployado: 
+
+- [https://auto-seguros.vercel.app/](https://auto-seguros.vercel.app/)
