@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Header from '../components/Header/Header';
-import { logar } from "@/actions/cadastrar";
+import { logar } from "@/actions/login";
 
 
 export default function page() {
@@ -22,7 +22,7 @@ export default function page() {
         <Header login={true} />
         <div className='bg-white rounded-2xl w-6/12 mx-auto'>
             <form action={handleSubmit} className='flex flex-col'>
-                <label htmlFor="user" className='text-xl mx-10 px-3 mb-5 font-bold'>Email ou CPF:</label>
+                <label htmlFor="user" className='text-xl mx-10 px-3 mb-5 font-bold'>Email:</label>
                 <input type="text" id='user' className='bg-blue-400 rounded-2xl h-16 mx-10 mb-9' />
                 <label htmlFor="password" className='text-xl mx-10 px-3 mb-5 font-bold'>Senha:</label>
                 <input type="password" id='password' className='bg-blue-400 rounded-2xl h-16 mx-10' />

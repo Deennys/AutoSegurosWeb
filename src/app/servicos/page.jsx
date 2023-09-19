@@ -1,14 +1,28 @@
 import React from "react";
 import Header from "../components/Header/Header";
 
-async function getPlanos() {
-  const url = "http://localhost:8080/api/Servico";
-  const response = await fetch(url, { next: { revalidate: 0 } });
+async function getServicos() {
+  const url = "https://api-autoseguros-production.up.railway.app/api/Servico";
+  
+  const token =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyb2dlcmlvQGdtYWlsLmNvbSIsImlzcyI6IlNlZ3Vyb0F1dG9tb3Rpdm8iLCJleHAiOjE2OTUwOTIwMTJ9.8RLTtA_UXC2lLkFg_QZGHBt-qGiIrIC2IjiW8mQg2KY";
+
+  const headers = {
+    'Authorization': `Bearer ${token}`, 
+    'Content-Type': 'application/json', 
+  }
+
+  const response = await fetch(url, { 
+    next: { revalidate: 0 },
+    method: 'GET',
+    headers: headers,
+   });
+
   return response.json();
 }
 
 export default async function page() {
-  const data = await getPlanos();
+  const data = await getServicos();
   return (
     <div div className="bg-sky-600 h-screen">
       <Header login={true} />
@@ -23,7 +37,7 @@ export default async function page() {
             <h3>R$5.000,00</h3>
           </div>
           <div className="flex justify-center">
-            <button className="w-4/5 bg-blue-400 mx-auto my-7 px-20 h-20 py-7 text-xl font-extrabold rounded-2xl">
+            <button type="button" className="w-4/5 bg-blue-400 mx-auto my-7 px-20 h-20 py-7 text-xl font-extrabold rounded-2xl">
               Ver Plano
             </button>
           </div>
@@ -32,7 +46,7 @@ export default async function page() {
               <div className="flex">
                 <button className="text-2xl" key={data.id}>
                 </button>
-                <span></span>data.nome
+                <span></span>data.servicosNome
               </div>
             ))}
           </div>

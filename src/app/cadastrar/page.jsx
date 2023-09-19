@@ -11,7 +11,7 @@ export default function page() {
             <form action="" className='flex flex-col'>
                 <label htmlFor="name" className='text-xl mx-10 px-3 mb-5 font-bold'>Nome Completo:</label>
                 <input type="text" id='name' className='bg-blue-400 rounded-2xl h-16 mx-10 mb-9' />
-                <label htmlFor="name" className='text-xl mx-10 px-3 mb-5 font-bold'>Email ou CPF:</label>
+                <label htmlFor="name" className='text-xl mx-10 px-3 mb-5 font-bold'>Email:</label>
                 <input type="text" id='name' className='bg-blue-400 rounded-2xl h-16 mx-10 mb-9' />
                 <label htmlFor="name" className='text-xl mx-10 px-3 mb-5 font-bold'>Senha:</label>
                 <input type="password" id='name' className='bg-blue-400 rounded-2xl h-16 mx-10' />

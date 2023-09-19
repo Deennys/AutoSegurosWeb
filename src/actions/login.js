@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache"
 
 export async function logar(cliente){
-    const url = "http://localhost:8080/api/cliente"
+    const url = "https://api-autoseguros-production.up.railway.app/api/login"
     
     const options = {
         method: "POST",
