@@ -24,7 +24,7 @@ async function getServicos() {
 export default async function page() {
   const data = await getServicos();
   return (
-    <div div className="bg-sky-600 h-screen">
+    <div div className="bg-sky-600 min-h-full">
       <Header login={true} />
       <div className="flex flex-col justify-center items-center bg-neutral-100 w-3/5 m-auto rounded-2xl">
         <div>
@@ -42,7 +42,7 @@ export default async function page() {
             </button>
           </div>
           <div className="flex flex-col items-center">
-            {data.map((data) => (
+            {data?.map((data) => (
               <div className="flex">
                 <button className="text-2xl" key={data.id}>
                 </button>
